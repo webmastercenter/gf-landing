@@ -33,14 +33,13 @@
   "devDependencies": {
     "prettier": "^2.8.8"
   },
-  "homepage": "https://github.com/Academia-Ninja/academia-ninja-blog#readme",
+  "homepage": "https://github.com/webmastercenter/gf-landing#readme",
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Academia-Ninja/academia-ninja-blog"
+    "url": "git+https://github.com/webmastercenter/gf-landing"
   },
   "scripts": {
     "build": "gatsby build",
