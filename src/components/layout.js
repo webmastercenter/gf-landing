@@ -9,8 +9,7 @@ const Layout = ({ location, title, children }) => {
         site {
           siteMetadata {
             social {
-              Linkedin
-              Github
+              Instagram
             }
           }
         }

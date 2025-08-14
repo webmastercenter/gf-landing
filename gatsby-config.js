@@ -4,11 +4,10 @@
 module.exports = {
   siteMetadata: {
     title: `GF Refrigeração`,
-    description: `Blog de conteúdos sobre tecnologia e desenvolvimento pessoal`,
-    siteUrl: `https://blog.academia-ninja.com/`,
+    description: `Serviços de instalação, manutenção e conserto de ar-condicionado, geladeiras, máquinas de lavar e lava-louças com atendimento rápido e de qualidade.`,
+    siteUrl: `http://localhost:8000/`,
     social: {
-      Github: `https://github.com/Academia-Ninja`,
-      Linkedin: `https://www.linkedin.com/in/ailton-loures`,
+      Instagram: `https://www.instagram.com/ailtonloures`,
     },
   },
   plugins: [
