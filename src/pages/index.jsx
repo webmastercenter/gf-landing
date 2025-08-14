@@ -1,34 +1,33 @@
-import * as React from "react"
-import { graphql } from "gatsby"
+import AboutSection from '@components/about';
+import FAQSection from '@components/faq';
+import Footer from '@components/footer';
+import HeroSection from '@components/hero';
+import Seo from '@components/seo';
+import ServicesSection from '@components/services';
+import { graphql } from 'gatsby';
+import * as React from 'react';
 
-import Seo from "@components/seo"
-import HeroSection from "@components/hero"
-import Footer from "@components/footer"
-import ServicesSection from "@components/services"
-import AboutSection from "@components/about"
-import FAQSection from "@components/faq"
-
-export default function IndexPage({ data, location }) {
-  return (
-    <>
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <FAQSection />
-      <Footer />
-    </>
-  )
+export default function IndexPage() {
+	return (
+		<>
+			<HeroSection />
+			<AboutSection />
+			<ServicesSection />
+			<FAQSection />
+			<Footer />
+		</>
+	);
 }
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Home" />;
 
 export const pageQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`
+	{
+		site {
+			siteMetadata {
+				title
+				description
+			}
+		}
+	}
+`;
