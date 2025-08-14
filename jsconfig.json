@@ -12,14 +12,8 @@
             "@pages/*": [
                 "pages/*"
             ],
-            "@templates/*": [
-                "templates/*"
-            ],
             "@shared/*": [
                 "shared/*"
-            ],
-            "@posts/*": [
-                "posts/*"
             ],
         }
     },

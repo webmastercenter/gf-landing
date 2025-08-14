@@ -26,12 +26,7 @@ const Navbar = ({ title }) => {
         <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
           <li>
             <Link to="/" activeClassName="active">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" activeClassName="active">
-              Sobre nós
+              Início
             </Link>
           </li>
         </ul>

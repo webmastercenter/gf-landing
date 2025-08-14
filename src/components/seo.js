@@ -30,7 +30,7 @@ const Seo = ({ description, title, children }) => {
       <meta property="og:url" content={siteUrl} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta http-equiv="Content-Language" content="pt-BR" />
+      <meta httpEquiv="Content-Language" content="pt-BR" />
       {children}
     </>
   )
