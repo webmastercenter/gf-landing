@@ -1,7 +1,7 @@
 import * as React from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
-const FAQSection = () => {
+export default function FAQSection() {
   const [openIndex, setOpenIndex] = React.useState(null)
 
   const faqs = [
@@ -32,9 +32,9 @@ const FAQSection = () => {
   }
 
   return (
-    <section id="faq" className="bg-white py-20">
+    <section id="faq" className="bg-gray-900 py-20">
       <div className="container mx-auto px-6 max-w-3xl">
-        <h2 className="text-3xl font-bold text-center mb-10">
+        <h2 className="text-3xl text-white font-bold text-center mb-10">
           Dúvidas Frequentes
         </h2>
 
@@ -66,5 +66,3 @@ const FAQSection = () => {
     </section>
   )
 }
-
-export default FAQSection

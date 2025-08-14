@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const AboutSection = () => {
+export default function AboutSection() {
   return (
     <section id="about" className="bg-gray-900 py-20">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
@@ -37,5 +37,3 @@ const AboutSection = () => {
     </section>
   )
 }
-
-export default AboutSection

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const ServicesSection = () => {
+export default function ServicesSection() {
   const services = [
     {
       title: "Desenvolvimento Web",
@@ -45,5 +45,3 @@ const ServicesSection = () => {
     </section>
   )
 }
-
-export default ServicesSection

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Menu, X } from "lucide-react"
 
-const HeroSection = () => {
+export default function HeroSection(){
   const [menuOpen, setMenuOpen] = React.useState(false)
 
   return (
@@ -119,5 +119,3 @@ const HeroSection = () => {
     </div>
   )
 }
-
-export default HeroSection
