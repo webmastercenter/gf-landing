@@ -1,6 +1,8 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import * as React from 'react';
 
+import Section from './ui/section';
+
 export default function FAQSection() {
 	const [openIndex, setOpenIndex] = React.useState(null);
 
@@ -28,7 +30,7 @@ export default function FAQSection() {
 	};
 
 	return (
-		<section id="faq" className="bg-gray-900 py-20">
+		<Section id="faq" className="bg-gray-900">
 			<div className="container mx-auto px-6 max-w-3xl">
 				<h2 className="text-3xl text-white font-bold text-center mb-10">Dúvidas Frequentes</h2>
 
@@ -47,6 +49,6 @@ export default function FAQSection() {
 					))}
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 }

@@ -1,6 +1,8 @@
 import { Menu, X } from 'lucide-react';
 import * as React from 'react';
 
+import LinkButton from './ui/link-button';
+
 export default function HeroSection() {
 	const [menuOpen, setMenuOpen] = React.useState(false);
 
@@ -39,11 +41,7 @@ export default function HeroSection() {
 
 				{/* Botão de ação */}
 				<div className="hidden md:block">
-					<a
-						href="#login"
-						className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md font-medium">
-						Entrar
-					</a>
+					<p>Contato: (21) 99105-8318</p>
 				</div>
 
 				{/* Botão mobile */}
@@ -94,11 +92,7 @@ export default function HeroSection() {
 					Nós oferecemos soluções modernas e eficientes para impulsionar o seu negócio.
 				</p>
 				<div className="flex space-x-4">
-					<a
-						href="#services"
-						className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md font-medium">
-						Saiba Mais
-					</a>
+					<LinkButton to="/#services">Saiba Mais</LinkButton>
 					<a
 						href="#contact"
 						className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg shadow-md font-medium">

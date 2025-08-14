@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Section from './ui/section';
+
 export default function ServicesSection() {
 	const services = [
 		{
@@ -25,7 +27,7 @@ export default function ServicesSection() {
 	];
 
 	return (
-		<section id="services" className="bg-gray-100 py-16">
+		<Section id="services" className="bg-gray-100">
 			<div className="container mx-auto px-6 text-center">
 				<h2 className="text-3xl font-bold mb-12">Nossos Serviços</h2>
 
@@ -41,6 +43,6 @@ export default function ServicesSection() {
 					))}
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 }
