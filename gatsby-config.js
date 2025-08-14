@@ -3,11 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Academia Ninja`,
-    author: {
-      name: `Ailton Loures`,
-      site: `https://www.linkedin.com/in/ailton-loures`,
-    },
+    title: `GF Refrigeração`,
     description: `Blog de conteúdos sobre tecnologia e desenvolvimento pessoal`,
     siteUrl: `https://blog.academia-ninja.com/`,
     social: {
