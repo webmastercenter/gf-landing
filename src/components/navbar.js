@@ -29,6 +29,16 @@ const Navbar = ({ title }) => {
               Início
             </Link>
           </li>
+          <li>
+            <Link to="/#services" activeClassName="active">
+              Serviços
+            </Link>
+          </li>
+          <li>
+            <Link to="/#institutional" activeClassName="active">
+              Quem somos
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
