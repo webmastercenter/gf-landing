@@ -1,5 +1,5 @@
 import Seo from '@components/seo';
-import LinkButton from '@components/ui/link-button';
+import LinkButton from '@components/ui/button';
 import * as React from 'react';
 
 export default function NotFoundPage() {

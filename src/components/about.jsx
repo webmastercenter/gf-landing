@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import LinkButton from './ui/link-button';
-import Section from './ui/section';
+import { LinkButton } from './ui/button';
+import { Section } from './ui/section';
+import { Paragraph, Title } from './ui/text';
 
 export default function AboutSection() {
 	return (
@@ -18,16 +19,16 @@ export default function AboutSection() {
 
 				{/* Texto */}
 				<div className="flex-1 text-center lg:text-left">
-					<h2 className="text-3xl text-white font-bold mb-6">Quem Somos</h2>
-					<p className="text-white mb-6 leading-relaxed">
+					<Title className="text-white">Quem somos</Title>
+					<Paragraph className="text-white ">
 						Somos uma empresa de tecnologia dedicada a entregar soluções modernas e eficientes para nossos
 						clientes. Atuamos em diversos segmentos, oferecendo desenvolvimento web, mobile, consultoria em
 						TI e soluções em nuvem.
-					</p>
-					<p className="text-white mb-8 leading-relaxed">
+					</Paragraph>
+					<Paragraph className="text-white mb-8">
 						Nosso compromisso é impulsionar negócios por meio da inovação e da transformação digital, sempre
 						com foco em qualidade e resultados.
-					</p>
+					</Paragraph>
 					<LinkButton to="/#services">Conheça nossos serviços</LinkButton>
 				</div>
 			</div>

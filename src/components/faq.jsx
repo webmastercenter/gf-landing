@@ -1,7 +1,8 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import * as React from 'react';
 
-import Section from './ui/section';
+import { Section } from './ui/section';
+import { Title } from './ui/text';
 
 export default function FAQSection() {
 	const [openIndex, setOpenIndex] = React.useState(null);
@@ -32,7 +33,7 @@ export default function FAQSection() {
 	return (
 		<Section id="faq" className="bg-gray-900">
 			<div className="container mx-auto px-6 max-w-3xl">
-				<h2 className="text-3xl text-white font-bold text-center mb-10">Dúvidas Frequentes</h2>
+				<Title className="text-white text-center">Dúvidas Frequentes</Title>
 
 				<div className="space-y-4">
 					{faqs.map((faq, index) => (

@@ -1,47 +1,75 @@
+import { formatPhoneNumber } from '@helpers/format';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Menu, X } from 'lucide-react';
 import * as React from 'react';
 
-import LinkButton from './ui/link-button';
+import { LinkButton, WhatsAppLinkButton } from './ui/button';
+import { Image } from './ui/image';
 
 export default function HeroSection() {
+	const { site } = useStaticQuery(
+		graphql`
+			query {
+				site {
+					siteMetadata {
+						title
+						description
+						contact
+					}
+				}
+			}
+		`
+	);
+
 	const [menuOpen, setMenuOpen] = React.useState(false);
+
+	const menuItems = [
+		{
+			label: 'Home',
+			to: '/',
+			key: 'home',
+		},
+		{
+			label: 'Quem somos',
+			to: '/#about',
+			key: 'about',
+		},
+		{
+			label: 'Serviços',
+			to: '/#services',
+			key: 'services',
+		},
+		{
+			label: 'Dúvidas Frequentes',
+			to: '/#faq',
+			key: 'faq',
+		},
+	];
 
 	return (
 		<div className="relative bg-gray-900 text-white min-h-screen flex flex-col">
 			{/* Navbar */}
 			<header className="flex justify-between items-center px-6 py-4 bg-gray-800 shadow-md">
 				{/* Logo */}
-				<h1 className="text-2xl font-bold">MinhaLogo</h1>
+				<h1 className="text-2xl font-bold">{site.siteMetadata.title}</h1>
 
 				{/* Menu Desktop */}
 				<nav className="hidden md:flex flex-1 justify-center">
 					<ul className="flex space-x-8">
-						<li>
-							<a href="#home" className="hover:text-gray-400">
-								Home
-							</a>
-						</li>
-						<li>
-							<a href="#services" className="hover:text-gray-400">
-								Serviços
-							</a>
-						</li>
-						<li>
-							<a href="#about" className="hover:text-gray-400">
-								Sobre
-							</a>
-						</li>
-						<li>
-							<a href="#contact" className="hover:text-gray-400">
-								Contato
-							</a>
-						</li>
+						{menuItems.map((item) => (
+							<li key={item.key}>
+								<a href={item.to} className="hover:text-gray-400">
+									{item.label}
+								</a>
+							</li>
+						))}
 					</ul>
 				</nav>
 
 				{/* Botão de ação */}
-				<div className="hidden md:block">
-					<p>Contato: (21) 99105-8318</p>
+				<div className="flex space-x-4">
+					<Image source={'whatsapp.png'} alt="WhatsApp Icon" className="w-6" />
+					<p>{formatPhoneNumber(site.siteMetadata.contact)}</p>
 				</div>
 
 				{/* Botão mobile */}
@@ -54,50 +82,24 @@ export default function HeroSection() {
 			{menuOpen && (
 				<nav className="md:hidden bg-gray-800 text-center">
 					<ul className="flex flex-col space-y-4 py-6">
-						<li>
-							<a href="#home" className="hover:text-gray-400">
-								Home
-							</a>
-						</li>
-						<li>
-							<a href="#services" className="hover:text-gray-400">
-								Serviços
-							</a>
-						</li>
-						<li>
-							<a href="#about" className="hover:text-gray-400">
-								Sobre
-							</a>
-						</li>
-						<li>
-							<a href="#contact" className="hover:text-gray-400">
-								Contato
-							</a>
-						</li>
-						<li>
-							<a
-								href="#login"
-								className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md font-medium">
-								Entrar
-							</a>
-						</li>
+						{menuItems.map((item) => (
+							<li key={item.key}>
+								<a href={item.to} className="hover:text-gray-400">
+									{item.label}
+								</a>
+							</li>
+						))}
 					</ul>
 				</nav>
 			)}
 
 			{/* Hero Content */}
 			<main className="flex flex-1 flex-col justify-center items-center text-center px-6">
-				<h2 className="text-5xl font-extrabold mb-6">Bem-vindo ao Nosso Site</h2>
-				<p className="text-lg text-gray-300 max-w-2xl mb-8">
-					Nós oferecemos soluções modernas e eficientes para impulsionar o seu negócio.
-				</p>
+				<h2 className="text-5xl font-extrabold mb-6">Bem-vindo à {site.siteMetadata.title}</h2>
+				<p className="text-lg text-gray-300 max-w-2xl mb-8">{site.siteMetadata.description}</p>
 				<div className="flex space-x-4">
 					<LinkButton to="/#services">Saiba Mais</LinkButton>
-					<a
-						href="#contact"
-						className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg shadow-md font-medium">
-						Contato
-					</a>
+					<WhatsAppLinkButton phoneNumber={site.siteMetadata.contact}>Solicitar Orçamento</WhatsAppLinkButton>
 				</div>
 			</main>
 		</div>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import Section from './ui/section';
+import { Section } from './ui/section';
+import { Title } from './ui/text';
 
 export default function ServicesSection() {
 	const services = [
@@ -29,7 +30,7 @@ export default function ServicesSection() {
 	return (
 		<Section id="services" className="bg-gray-100">
 			<div className="container mx-auto px-6 text-center">
-				<h2 className="text-3xl font-bold mb-12">Nossos Serviços</h2>
+				<Title>Nossos Serviços</Title>
 
 				{/* Grid Responsiva */}
 				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

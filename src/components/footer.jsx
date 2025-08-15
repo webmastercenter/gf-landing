@@ -1,12 +1,27 @@
+import { useStaticQuery, graphql } from 'gatsby';
 import * as React from 'react';
 
 export default function Footer() {
+	const { site } = useStaticQuery(
+		graphql`
+			query {
+				site {
+					siteMetadata {
+						title
+						description
+						contact
+					}
+				}
+			}
+		`
+	);
+
 	return (
 		<footer className="bottom-0 left-0 w-full bg-gray-800 text-gray-300 py-4 shadow-inner">
 			<div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm">
 				{/* Texto © */}
 				<p className="mb-2 md:mb-0">
-					&copy; {new Date().getFullYear()} MinhaEmpresa. Todos os direitos reservados.
+					&copy; {new Date().getFullYear()} {site.siteMetadata.title}. Todos os direitos reservados.
 				</p>
 
 				{/* Links sociais */}
