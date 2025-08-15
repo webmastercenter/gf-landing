@@ -1,5 +1,5 @@
 import * as React from 'react';
 
-export function Image({ source, ...props }) {
-	return <img src={`/img/${source}`} {...props} />;
+export function Image({ source, alt, ...props }) {
+	return <img src={`/img/${source}`} alt={alt || ''} {...props} />;
 }

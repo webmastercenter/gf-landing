@@ -19,7 +19,7 @@ export default function IndexPage() {
 	);
 }
 
-export const Head = () => <Seo title="Home" />;
+export const Head = () => <Seo title="Início" />;
 
 export const pageQuery = graphql`
 	{

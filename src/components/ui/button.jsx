@@ -1,27 +1,26 @@
 import * as React from 'react';
 
-export function LinkButton({ to, children, ...props }) {
+export function LinkButton({ to, children, className, ...props }) {
 	return (
 		<a
 			href={to}
-			className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md font-medium"
+			className={`px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md font-medium ${className}`}
 			{...props}>
 			{children}
 		</a>
 	);
 }
 
-export function WhatsAppLinkButton({ phoneNumber, message, children, ...props }) {
+export function WhatsAppLinkButton({ phoneNumber, message, children, className }) {
 	return (
-		<a
-			href={`https://wa.me/${phoneNumber}?text=${
-				message || 'Olá, vim por meio do site e gostaria de solicitar um orçamento.'
+		<LinkButton
+			to={`https://wa.me/${phoneNumber}?text=${
+				message || 'Olá! Vim através do site e quero solicitar um orçamento.'
 			}`}
 			rel="noreferrer"
 			target="_blank"
-			className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-md font-medium"
-			{...props}>
+			className={className}>
 			{children}
-		</a>
+		</LinkButton>
 	);
 }

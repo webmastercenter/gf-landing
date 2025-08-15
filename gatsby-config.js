@@ -6,7 +6,10 @@ module.exports = {
 		title: `GF Refrigeração`,
 		description: `Somos especialistas em serviços de instalação, manutenção e conserto de ar-condicionado, geladeiras, máquinas de lavar e lava-louças com atendimento rápido e qualidade.`,
 		siteUrl: `http://localhost:8000/`,
-		contact: `5521991058318`,
+		contact: {
+			name: `Gabriel Vitor`,
+			phone: `5521991058318`,
+		},
 		social: {
 			Instagram: `https://www.instagram.com/ailtonloures`,
 		},
@@ -29,7 +32,7 @@ module.exports = {
 				start_url: `/`,
 				background_color: `#ffffff`,
 				display: `minimal-ui`,
-				icon: `static/img/logo.jpg`,
+				icon: `static/img/logo.png`,
 			},
 		},
 		{
