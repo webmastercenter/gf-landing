@@ -1,7 +1,7 @@
 import { formatPhoneNumber } from '@helpers/format';
 import { menuItems, regionItems, serviceItems } from '@shared/data';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Phone, MapPin, UserRound } from 'lucide-react';
+import { Phone, MapPin, Link, Cog } from 'lucide-react';
 import * as React from 'react';
 
 import { Image } from './ui/image';
@@ -39,11 +39,13 @@ export default function Footer() {
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm text-center md:text-left w-full">
 						{/* Regiões de atendimento */}
 						<div>
-							<h3 className="text-white font-semibold mb-2">Regiões de atendimento</h3>
+							<h3 className="flex gap-2 text-white font-semibold mb-2">
+								<MapPin size={16} />
+								Regiões de atendimento
+							</h3>
 							<ul className="space-y-1">
 								{regionItems.map((item) => (
-									<li key={item.key} className="flex gap-2 justify-center md:justify-start">
-										<MapPin size={16} />
+									<li key={item.key} className="justify-center md:justify-start">
 										<span>{item.label}</span>
 									</li>
 								))}
@@ -52,7 +54,10 @@ export default function Footer() {
 
 						{/* Links úteis */}
 						<div>
-							<h3 className="text-white font-semibold mb-2">Links</h3>
+							<h3 className="flex gap-2 text-white font-semibold mb-2">
+								<Link size={16} />
+								Links
+							</h3>
 							<ul className="space-y-1">
 								{menuItems.map((item) => (
 									<li key={item.key}>
@@ -66,7 +71,10 @@ export default function Footer() {
 
 						{/* Serviços */}
 						<div>
-							<h3 className="text-white font-semibold mb-2">Serviços</h3>
+							<h3 className="flex gap-2 text-white font-semibold mb-2">
+								<Cog size={16} />
+								Serviços
+							</h3>
 							<ul className="space-y-1">
 								{serviceItems.map((item, index) => (
 									<li key={index}>
@@ -78,24 +86,15 @@ export default function Footer() {
 
 						{/* Contatos */}
 						<div>
-							<h3 className="text-white font-semibold mb-2">Contato</h3>
+							<h3 className="flex gap-2 text-white font-semibold mb-2">
+								<Phone size={16} />
+								Contato
+							</h3>
 							<ul className="space-y-1">
 								<li>
 									<span className="hover:text-white flex gap-2 justify-center md:justify-start">
-										<UserRound size={16} />
-										<span>{site.siteMetadata.contact.name}</span>
-									</span>
-								</li>
-								<li>
-									<span className="hover:text-white flex gap-2 justify-center md:justify-start">
-										<Phone size={16} />
+										<span>{site.siteMetadata.contact.name}:</span>
 										<span>{formatPhoneNumber(site.siteMetadata.contact.phone)}</span>
-									</span>
-								</li>
-								<li>
-									<span className="hover:text-white flex gap-2 justify-center md:justify-start">
-										<MapPin size={16} />
-										<span>Rio de Janeiro - RJ</span>
 									</span>
 								</li>
 							</ul>
