@@ -26,10 +26,10 @@ export default function AboutSection() {
 		<Section id="about" className="bg-gray-900">
 			<div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
 				{/* Imagem ou ilustração */}
-				<div className="flex flex-1 justify-center items-center">
+				<div className="flex flex-1 justify-center items-center w-full">
 					<Image
 						source={'perfil.jpg'}
-						className="rounded-2xl shadow-lg max-w-lg"
+						className="rounded-2xl shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto"
 						alt={site.siteMetadata.contact.name}
 					/>
 				</div>
@@ -37,7 +37,7 @@ export default function AboutSection() {
 				{/* Texto */}
 				<div className="flex-1 text-center lg:text-left">
 					<Title className="text-white">Quem somos</Title>
-					<Paragraph className="text-white ">
+					<Paragraph className="text-white text-justify">
 						Na {site.siteMetadata.title}, somos especializados em instalação, manutenção e conserto de
 						equipamentos de climatização e eletrodomésticos. Oferecemos serviços de excelência em
 						ar-condicionados, incluindo instalação, limpeza, manutenção preventiva e corretiva, além de
@@ -45,7 +45,7 @@ export default function AboutSection() {
 						garantir eficiência, durabilidade e funcionamento perfeito dos seus aparelhos, sempre com
 						soluções rápidas, seguras e de alta qualidade.
 					</Paragraph>
-					<Paragraph className="text-white ">
+					<Paragraph className="text-white text-justify">
 						Nosso especialista, Gabriel, carrega uma tradição de família no setor: trabalhou a vida inteira
 						com seu pai, que também seguiu os passos do avô. Com mais de 10 anos de experiência, Gabriel
 						combina conhecimento técnico, dedicação e atendimento personalizado, garantindo que cada cliente

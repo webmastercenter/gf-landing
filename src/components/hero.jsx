@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Menu, X } from 'lucide-react';
 import * as React from 'react';
 
+import { FadeIn } from './animations';
 import { WhatsAppLinkButton } from './ui/button';
 import { Image } from './ui/image';
 
@@ -69,9 +70,9 @@ export default function HeroSection() {
 			)}
 
 			{/* Hero Content */}
-			<main className="flex flex-1 flex-col justify-center items-center text-center px-6">
+			<FadeIn className="flex flex-1 flex-col justify-center items-center text-center px-6">
 				<h2 className="text-5xl font-extrabold mb-6">Bem-vindo à {site.siteMetadata.title}</h2>
-				<p className="text-lg text-gray-300 max-w-2xl mb-8">{site.siteMetadata.description}</p>
+				<p className="text-lg text-gray-300 max-w-2xl mb-8 ">{site.siteMetadata.description}</p>
 				<div className="flex space-x-4">
 					<WhatsAppLinkButton
 						phoneNumber={site.siteMetadata.contact.phone}
@@ -80,7 +81,7 @@ export default function HeroSection() {
 						Entrar em contato
 					</WhatsAppLinkButton>
 				</div>
-			</main>
+			</FadeIn>
 		</div>
 	);
 }

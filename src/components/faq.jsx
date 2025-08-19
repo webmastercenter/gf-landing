@@ -1,3 +1,4 @@
+import { faqItems } from '@shared/data';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import * as React from 'react';
 
@@ -6,25 +7,6 @@ import { Title } from './ui/text';
 
 export default function FAQSection() {
 	const [openIndex, setOpenIndex] = React.useState(null);
-
-	const faqs = [
-		{
-			question: 'Quais serviços vocês oferecem?',
-			answer: 'Trabalhamos com desenvolvimento web, aplicativos mobile, soluções em nuvem, consultoria em TI e automação de processos.',
-		},
-		{
-			question: 'Vocês atendem empresas de qualquer porte?',
-			answer: 'Sim! Atuamos desde pequenas empresas até grandes corporações, adaptando nossas soluções conforme a necessidade do cliente.',
-		},
-		{
-			question: 'Qual é o prazo médio de entrega dos projetos?',
-			answer: 'O prazo depende do escopo do projeto, mas sempre prezamos por agilidade sem abrir mão da qualidade.',
-		},
-		{
-			question: 'Como posso solicitar um orçamento?',
-			answer: 'Você pode entrar em contato através do nosso formulário no site ou diretamente pelo e-mail/WhatsApp disponíveis na seção de contato.',
-		},
-	];
 
 	const toggleFAQ = (index) => {
 		setOpenIndex(openIndex === index ? null : index);
@@ -36,16 +18,16 @@ export default function FAQSection() {
 				<Title className="text-white text-center">Dúvidas Frequentes</Title>
 
 				<div className="space-y-4">
-					{faqs.map((faq, index) => (
+					{faqItems.map((item, index) => (
 						<div key={index} className="bg-white shadow-md rounded-xl overflow-hidden">
 							<button
 								onClick={() => toggleFAQ(index)}
 								className="w-full flex justify-between items-center px-6 py-4 text-left font-medium hover:bg-gray-50 transition">
-								{faq.question}
+								{item.question}
 								{openIndex === index ? <ChevronUp size={22} /> : <ChevronDown size={22} />}
 							</button>
 
-							{openIndex === index && <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>}
+							{openIndex === index && <div className="px-6 pb-4 text-gray-600">{item.answer}</div>}
 						</div>
 					))}
 				</div>

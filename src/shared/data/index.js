@@ -69,7 +69,7 @@ export const serviceItems = [
 
 export const equipmentItems = [
 	{
-		label: 'Ar-condicionados (residenciais e comerciais)',
+		label: 'Ar-condicionados',
 		icon: 'ar-condicionado.png',
 	},
 	{
@@ -87,5 +87,40 @@ export const equipmentItems = [
 	{
 		label: 'Freezers',
 		icon: 'freezer.png',
+	},
+];
+
+export const faqItems = [
+	{
+		question: 'Qual a diferença entre manutenção preventiva e corretiva?',
+		answer: 'A preventiva é feita regularmente para evitar falhas, já a corretiva é realizada quando o equipamento apresenta algum problema.',
+	},
+	{
+		question: 'De quanto em quanto tempo devo limpar meu ar-condicionado?',
+		answer: 'O ideal é realizar a limpeza a cada 6 meses, ou antes, dependendo do uso e da qualidade do ar no ambiente.',
+	},
+	{
+		question: 'Vocês instalam qualquer modelo de ar-condicionado?',
+		answer: 'Sim, trabalhamos com instalação de diferentes modelos e marcas, sempre garantindo segurança e eficiência.',
+	},
+	{
+		question: 'Minha máquina não está centrifugando, o que pode ser?',
+		answer: 'Pode estar relacionado a problemas na bomba de drenagem, motor ou até no painel eletrônico. É necessário diagnóstico técnico.',
+	},
+	{
+		question: 'Por que minha lava-louças não está secando a louça?',
+		answer: 'Isso pode ocorrer por falha na resistência de aquecimento ou no sistema de ventilação. Uma avaliação técnica identifica a causa.',
+	},
+	{
+		question: 'Vocês fazem instalação de lava-louças também?',
+		answer: 'Sim, realizamos tanto a instalação quanto os reparos necessários.',
+	},
+	{
+		question: 'Minha geladeira não está gelando corretamente, o que pode ser?',
+		answer: 'Pode estar relacionado a problemas no termostato, compressor ou falta de gás refrigerante. Só a avaliação técnica confirma.',
+	},
+	{
+		question: 'Vocês trabalham com troca de peças originais?',
+		answer: 'Sim, sempre utilizamos peças de qualidade e, sempre que possível, originais das fabricantes.',
 	},
 ];

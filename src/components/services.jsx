@@ -26,7 +26,7 @@ export default function ServicesSection() {
 		<Section id="services" className="bg-gray-100">
 			<div className="container mx-auto px-6 text-center">
 				<Title>Nossos Serviços</Title>
-				<Paragraph>
+				<Paragraph className="text-justify">
 					Oferecemos soluções completas para ar-condicionados e eletrodomésticos, com atendimento rápido,
 					profissional e de confiança. Trabalhamos com instalação, manutenção, conserto e limpeza, sempre
 					garantindo qualidade e segurança para você.
