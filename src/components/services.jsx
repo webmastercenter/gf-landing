@@ -33,7 +33,7 @@ export default function ServicesSection() {
 				</Paragraph>
 
 				{/* Grid Responsiva */}
-				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+				<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 					{serviceItems.map((item, index) => (
 						<div
 							key={index}
@@ -49,7 +49,7 @@ export default function ServicesSection() {
 
 				{/* Equipamentos */}
 				<Title className="mt-16">Equipamentos que Atendemos</Title>
-				<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+				<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 					{equipmentItems.map((item, index) => (
 						<div
 							key={index}

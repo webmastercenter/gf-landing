@@ -13,7 +13,7 @@ export default function FAQSection() {
 	};
 
 	return (
-		<Section id="faq" className="bg-gray-900">
+		<Section id="faq" className="bg-transparent">
 			<div className="container mx-auto px-6 max-w-3xl">
 				<Title className="text-white text-center">Dúvidas Frequentes</Title>
 

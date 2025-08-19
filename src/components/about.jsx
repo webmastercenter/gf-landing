@@ -23,7 +23,7 @@ export default function AboutSection() {
 	);
 
 	return (
-		<Section id="about" className="bg-gray-900">
+		<Section id="about" className="bg-transparent">
 			<div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
 				{/* Imagem ou ilustração */}
 				<div className="flex flex-1 justify-center items-center w-full">
