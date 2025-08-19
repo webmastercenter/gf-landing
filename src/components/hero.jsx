@@ -76,7 +76,7 @@ export default function HeroSection() {
 					<WhatsAppLinkButton
 						phoneNumber={site.siteMetadata.contact.phone}
 						className="flex items-center gap-2">
-						<Image source={'whatsapp.png'} className="w-6" />
+						<Image source={'icons/whatsapp.png'} className="w-6" />
 						Entrar em contato
 					</WhatsAppLinkButton>
 				</div>

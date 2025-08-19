@@ -15,7 +15,8 @@ export function WhatsAppLinkButton({ phoneNumber, message, children, className }
 	return (
 		<LinkButton
 			to={`https://wa.me/${phoneNumber}?text=${
-				message || 'Olá! Vim através do site e quero solicitar um orçamento.'
+				message ||
+				'Olá, Gabriel! Vim através do site e gostaria de solicitar um orçamento dos serviços oferecidos.'
 			}`}
 			rel="noreferrer"
 			target="_blank"

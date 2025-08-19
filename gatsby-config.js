@@ -3,12 +3,12 @@
  */
 module.exports = {
 	siteMetadata: {
-		title: `GF Refrigeração`,
+		title: `GFRefrigeração`,
 		description: `Somos especialistas em serviços de instalação, manutenção e conserto de ar-condicionado, geladeiras, máquinas de lavar e lava-louças com atendimento rápido e qualidade.`,
 		siteUrl: `http://localhost:8000/`,
 		contact: {
 			name: `Gabriel Vitor`,
-			phone: `5521991058318`,
+			phone: `5521977178868`,
 		},
 		social: {
 			Instagram: `https://www.instagram.com/ailtonloures`,

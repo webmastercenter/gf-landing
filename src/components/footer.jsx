@@ -93,7 +93,6 @@ export default function Footer() {
 							<ul className="space-y-1">
 								<li>
 									<span className="hover:text-white flex gap-2 justify-center md:justify-start">
-										<span>{site.siteMetadata.contact.name}:</span>
 										<span>{formatPhoneNumber(site.siteMetadata.contact.phone)}</span>
 									</span>
 								</li>
@@ -104,7 +103,8 @@ export default function Footer() {
 
 				{/* Linha inferior */}
 				<div className="border-t border-gray-700 mt-8 pt-4 text-center text-xs text-gray-500 w-full">
-					&copy; {new Date().getFullYear()} {site.siteMetadata.title}. Todos os direitos reservados.
+					&copy; {new Date().getFullYear()} {site.siteMetadata.title}. Todos os direitos reservados. CNPJ:
+					29.769.004/0001-10
 				</div>
 			</div>
 		</footer>
