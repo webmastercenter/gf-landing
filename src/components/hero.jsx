@@ -1,11 +1,11 @@
 import { menuItems } from '@shared/data';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import * as React from 'react';
 
 import { FadeIn } from './animations';
-import { WhatsAppLinkButton } from './ui/button';
+import { LinkButton, WhatsAppLinkButton } from './ui/button';
 import { Image } from './ui/image';
 
 export default function HeroSection() {
@@ -86,11 +86,14 @@ export default function HeroSection() {
 							animate={{ y: 0 }}
 							exit={{ y: -200 }}
 							transition={{ duration: 0.2 }}
-							className="bg-gray-900 text-center w-full absolute top-0 left-0">
+							className="bg-gray-900 text-center w-full absolute top-0 left-0 z-50 pt-16">
 							<ul className="flex flex-col space-y-4 py-6">
 								{menuItems.map((item) => (
 									<li key={item.key}>
-										<a href={item.to} className="hover:text-gray-400">
+										<a
+											href={item.to}
+											className="hover:text-gray-400 block py-2"
+											onClick={() => setMenuOpen(false)}>
 											{item.label}
 										</a>
 									</li>
@@ -106,6 +109,10 @@ export default function HeroSection() {
 				<h2 className="text-5xl font-extrabold mb-6">Bem-vindo à {site.siteMetadata.title}</h2>
 				<p className="text-lg text-gray-300 max-w-2xl mb-8 ">{site.siteMetadata.description}</p>
 				<div className="flex space-x-4">
+					<LinkButton to="/#about" className="flex items-center gap-2">
+						<ChevronDown />
+						Saiba mais
+					</LinkButton>
 					<WhatsAppLinkButton
 						phoneNumber={site.siteMetadata.contact.phone}
 						className="flex items-center gap-2">
