@@ -1,11 +1,11 @@
 import { menuItems } from '@shared/data';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import * as React from 'react';
 
 import { FadeIn } from './animations';
-import { LinkButton, WhatsAppLinkButton } from './ui/button';
+import { WhatsAppLinkButton } from './ui/button';
 import { Image } from './ui/image';
 
 export default function HeroSection() {
@@ -109,10 +109,6 @@ export default function HeroSection() {
 				<h2 className="text-5xl font-extrabold mb-6">Bem-vindo à {site.siteMetadata.title}</h2>
 				<p className="text-lg text-gray-300 max-w-2xl mb-8 ">{site.siteMetadata.description}</p>
 				<div className="flex space-x-4">
-					<LinkButton to="/#about" className="flex items-center gap-2">
-						<ChevronDown />
-						Saiba mais
-					</LinkButton>
 					<WhatsAppLinkButton
 						phoneNumber={site.siteMetadata.contact.phone}
 						className="flex items-center gap-2">
